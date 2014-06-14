@@ -250,7 +250,7 @@ add_action( 'widgets_init', create_function( '', 'register_widget("SIS_Tweet_Wid
 		<p>
 			<label for="<?php echo $this->get_field_id( 'apikey' ); ?>"><?php _e('Api Key', 'sistweets') ?></label>
 			<input type="text" class="widefat" id="<?php echo $this->get_field_id( 'apikey' ); ?>" name="<?php echo $this->get_field_name( 'apikey' ); ?>" value="<?php echo $instance['apikey']; ?>" />
-			<small>Don't know your API Key, Api Secret, Access Token and Access Token Secret? <a target="_blank" href="http://sayful1.wordpress.com/">Click here to get help.</a></small>
+			<small>Don't know your API Key, Api Secret, Access Token and Access Token Secret? <a target="_blank" href="http://sayful1.wordpress.com/2014/06/14/how-to-generate-twitter-api-key-api-secret-access-token-access-token-secret/">Click here to get help.</a></small>
 		</p>
 
 		<!-- apisecret: Text Input -->
