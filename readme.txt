@@ -42,8 +42,8 @@ Do you have questions or issues with Display Latest Tweets? [Ask for support her
 
 == Screenshots ==
 
-1. Screenshot of SIS Facebook Like Box Widget
-2. Screenshot of SIS Facebook Like Box Widget Front-end
+1. Screenshot of Display Latest Tweets Widget
+2. Screenshot of Display Latest Tweets Widget Front-end
 
 == Changelog ==
 
