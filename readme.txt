@@ -43,7 +43,7 @@ Do you have questions or issues with Display Latest Tweets? [Ask for support her
 == Screenshots ==
 
 1. Screenshot of Display Latest Tweets Widget
-2. Screenshot of Display Latest Tweets Widget Front-end
+2. Screenshot of Display Latest Tweets Widget Front-end at Twenty Fifteen theme
 
 == Changelog ==
 
