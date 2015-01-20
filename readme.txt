@@ -54,8 +54,8 @@ Do you have questions or issues with Display Latest Tweets? [Ask for support her
 
 == Changelog ==
 
-= version 1.2 =
-* Added some changes at style.
+= version 1.0 =
+* Added some style.
 
 = version 1.1 =
 * Fixed some bug to work perfectly at latest WordPress version.
