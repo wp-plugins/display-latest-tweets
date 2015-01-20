@@ -3,7 +3,7 @@
  * Plugin Name: Display Latest Tweets
  * Plugin URI: http://wordpress.org/plugins/display-latest-tweets/
  * Description: A widget that displays your latest tweets
- * Version: 1.1
+ * Version: 1.2
  * Author: Sayful Islam
  * Author URI: http://www.sayful.net
  * Text Domain: sistweets
@@ -19,12 +19,15 @@ class SIS_Tweet_Widget extends WP_Widget {
 	/**
 	 * Register widget with WordPress.
 	 */
-	function __construct() {
+	public function __construct() {
 		parent::__construct(
 			'display-latest-tweets', // Base ID
 			__( 'Display Latest Tweets', 'sistweets' ), // Name
 			array( 'description' => __( 'A widget that displays your latest tweets.', 'sistweets' ), ) // Args
 		);
+
+		// Register site styles and scripts
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_widget_styles' ) );
 	}
 
     /**
@@ -154,16 +157,17 @@ class SIS_Tweet_Widget extends WP_Widget {
 	        // Add links to URL and username mention in tweets.
 	        $patterns = array( '@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?)@', '/@([A-Za-z0-9_]{1,15})/' );
 	        $replace = array( '<a href="$1">$1</a>', '<a href="http://twitter.com/$1">@$1</a>' );
-	 
+	 		
+	 		echo '<ul>';
 	        foreach ( $timelines as $timeline ) {
 	            $result = preg_replace( $patterns, $replace, $timeline->text );
 	 
-	            echo '<div>';
-	                echo $result . '<br/>';
-	                echo $this->tweet_time( $timeline->created_at );
-	            echo '</div>';
-	            echo '<br/>';
+	            echo '<li>';
+	                echo $result;
+	                echo '<span>'.$this->tweet_time( $timeline->created_at ).'</span>';
+	            echo '</li>';
 	        }
+	        echo '</ul>';
 	 
 	    } else {
 	        _e( 'Error fetching feeds. Please verify the Twitter settings in the widget.', 'twitter_tweets_widget' );
@@ -257,6 +261,14 @@ class SIS_Tweet_Widget extends WP_Widget {
 
 		return $instance;
 	}
+	/**
+	 * Registers and enqueues widget-specific styles.
+	 */
+	public function register_widget_styles() {
+
+		wp_enqueue_style( 'display-latest-tweets-widget-styles', plugins_url( 'css/style.css', __FILE__ ), array(), '1.2', 'all' );
+
+	} // end register_widget_styles
 
 } // class SIS_Tweet_Widget
 

@@ -3,7 +3,7 @@ Contributors: sayful
 Tags: tweets, twitter, widget, twitter follow, twitter follow button, follow, follow button, sharing, social, social plugin, social sharing
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,9 @@ Do you have questions or issues with Display Latest Tweets? [Ask for support her
 2. Screenshot of Display Latest Tweets Widget Front-end at Twenty Fifteen theme
 
 == Changelog ==
+
+= version 1.2 =
+* Added some changes at style.
 
 = version 1.1 =
 * Fixed some bug to work perfectly at latest WordPress version.
