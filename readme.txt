@@ -13,6 +13,15 @@ A widget that displays your latest tweets from your twitter account. This plugin
 
 Connect your Twitter account to this plugin and the widget will display your latest tweets on your site. This plugin is compatible with the new Twitter API 1.1 and provides full OAuth authentication via the WordPress admin area.
 
+= Requirements =
+To work this plugin, following component need to be installed in your server.
+<ul>
+	<li>PHP version 5.3 or higher</li>
+	<li>cURL</li>
+	<li>WordPress 3.0</li>
+	<li>Twitter API 1.1</li>
+</ul>
+
 = Usages =
 
 1. At first, Install and activate the plugin.
@@ -54,7 +63,7 @@ Do you have questions or issues with Display Latest Tweets? [Ask for support her
 
 == Changelog ==
 
-= version 1.0 =
+= version 1.2 =
 * Added some style.
 
 = version 1.1 =
