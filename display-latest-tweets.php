@@ -5,7 +5,7 @@
  * Description: A widget that displays your latest tweets
  * Version: 1.3.0
  * Author: Sayful Islam
- * Author URI: http://www.sayful.net
+ * Author URI: https://profiles.wordpress.org/sayful/
  * Text Domain: sistweets
  * Domain Path: /languages/
  * License: GPL2
