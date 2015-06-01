@@ -11,6 +11,8 @@
  * @license  MIT License
  * @link     http://github.com/j7mbo/twitter-api-php
  */
+if( !class_exists('TwitterAPIExchange') ):
+
 class TwitterAPIExchange
 {
     private $oauth_access_token;
@@ -261,3 +263,4 @@ class TwitterAPIExchange
     }
 
 }
+endif;
