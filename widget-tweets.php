@@ -1,20 +1,9 @@
 <?php
-/*
- * Plugin Name: Display Latest Tweets
- * Plugin URI: http://wordpress.org/plugins/display-latest-tweets/
- * Description: A widget that displays your latest tweets
- * Version: 1.2
- * Author: Sayful Islam
- * Author URI: http://www.sayful.net
- * Text Domain: sistweets
- * Domain Path: /languages/
- * License: GPL2
-*/
 
 /**
- * Adds SIS_Tweet_Widget widget.
+ * Adds Display_Latest_Tweets_Widget widget.
  */
-class SIS_Tweet_Widget extends WP_Widget {
+class Display_Latest_Tweets_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
@@ -25,9 +14,6 @@ class SIS_Tweet_Widget extends WP_Widget {
 			__( 'Display Latest Tweets', 'sistweets' ), // Name
 			array( 'description' => __( 'A widget that displays your latest tweets.', 'sistweets' ), ) // Args
 		);
-
-		// Register site styles and scripts
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_widget_styles' ) );
 	}
 
     /**
@@ -158,6 +144,17 @@ class SIS_Tweet_Widget extends WP_Widget {
 	        $patterns = array( '@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?)@', '/@([A-Za-z0-9_]{1,15})/' );
 	        $replace = array( '<a href="$1">$1</a>', '<a href="http://twitter.com/$1">@$1</a>' );
 	 		
+	        ob_start();
+	        ?>
+			<style type="text/css">
+				.widget_display-latest-tweets ul {margin: 0;padding: 0;list-style: none;}
+				.widget_display-latest-tweets ul li{border-top: 1px solid rgba(51, 51, 51, 0.2);padding: 12px 0;}
+				.widget_display-latest-tweets ul li:first-child{border-top: 0 none;padding-top: 0;}
+				.widget_display-latest-tweets ul li a{display: block;}
+			</style>
+	        <?php
+	        echo ob_get_clean();
+	        
 	 		echo '<ul>';
 	        foreach ( $timelines as $timeline ) {
 	            $result = preg_replace( $patterns, $replace, $timeline->text );
@@ -261,16 +258,8 @@ class SIS_Tweet_Widget extends WP_Widget {
 
 		return $instance;
 	}
-	/**
-	 * Registers and enqueues widget-specific styles.
-	 */
-	public function register_widget_styles() {
 
-		wp_enqueue_style( 'display-latest-tweets-widget-styles', plugins_url( 'css/style.css', __FILE__ ), array(), '1.2', 'all' );
+} // class Display_Latest_Tweets_Widget
 
-	} // end register_widget_styles
-
-} // class SIS_Tweet_Widget
-
-// register SIS_Tweet_Widget widget
-add_action( 'widgets_init', create_function( '', 'register_widget("SIS_Tweet_Widget");' ) );
+// register Display_Latest_Tweets_Widget widget
+add_action( 'widgets_init', create_function( '', 'register_widget("Display_Latest_Tweets_Widget");' ) );

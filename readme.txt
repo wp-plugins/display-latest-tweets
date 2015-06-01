@@ -3,7 +3,7 @@ Contributors: sayful
 Tags: tweets, twitter, widget, twitter follow, twitter follow button, follow, follow button, sharing, social, social plugin, social sharing
 Requires at least: 3.0
 Tested up to: 4.1
-Stable tag: 1.2
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,6 @@ To work this plugin, following component need to be installed in your server.
 	<li>PHP version 5.3 or higher</li>
 	<li>cURL</li>
 	<li>WordPress 3.0</li>
-	<li>Twitter API 1.1</li>
 </ul>
 
 = Usages =
@@ -48,7 +47,7 @@ Install by ZIP File
 
 Install by FTP
 
-* Find the directory titles 'sis-nicescroll' and upload it and all files within to the plugins directory of your WordPress install (WORDPRESS-DIRECTORY/wp-content/plugins/) [e.g. www.yourdomain.com/wp-content/plugins/]
+* Find the directory titles 'display-latest-tweets' and upload it and all files within to the plugins directory of your WordPress install (WORDPRESS-DIRECTORY/wp-content/plugins/) [e.g. www.yourdomain.com/wp-content/plugins/]
 * From your WordPress dashboard, choose 'Installed Plugins' option under the 'Plugins' category
 * Locate the newly added plugin and click on the 'Activate' link to enable its features.
 
@@ -63,6 +62,9 @@ Do you have questions or issues with Display Latest Tweets? [Ask for support her
 
 == Changelog ==
 
+= version 1.3.0 =
+* Update code with latest WordPress standard
+
 = version 1.2 =
 * Added some style.
 
@@ -72,12 +74,3 @@ Do you have questions or issues with Display Latest Tweets? [Ask for support her
 
 = version 1.0 =
 * Implementation of basic functionality.
-
-== CREDIT ==
-
-1. This plugin was developed by [Sayful Islam](http://sayful.net)
-2. Thanks [Agbonghama Collins](http://tutsplus.com/authors/agbonghama-collins) for his helpful tutorial at [tuts+](http://tutsplus.com/) that is used to update the plugin at version 1.1.
-
-== CONTACT ==
-
-[Sayful Islam](http://www.sayful.net)
